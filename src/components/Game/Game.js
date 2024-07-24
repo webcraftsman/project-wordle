@@ -15,18 +15,12 @@ function Game() {
   const [results, setResults] = React.useState([]);
 
   function addResult(guess) {
-    const newResult = {
-      id: Math.random(),
-      guess
-    };
-
-    const nextResult = [...results, newResult];
-    setResults(nextResult);
+    setResults([...results, guess]);
   }
 
   return <>
-    <GuessInput addResult={addResult} />
     <GuessResults results={results} />
+    <GuessInput addResult={addResult} />
   </>;
 }
 
