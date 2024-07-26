@@ -5,7 +5,7 @@ import { range } from '../../utils';
 
 import Guess from '../Guess';
 
-function GuessResults({guesses, answer}) {
+function GuessResults({guesses, answer, status}) {
   return (
     <>
       <div className="guess-results">
